@@ -1,2 +1,2 @@
 # Genesis
-Please move the document here [View](https://fmfe.github.io/genesis-docs/)
+Please move the document here [View](https://anish2690.github.io/genesis-docs-en/)

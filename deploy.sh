@@ -18,6 +18,6 @@ git add -A
 git commit -m 'deploy'
 
 # If you post to https://<fmfe>.github.io/<genesis-docs-en>
-git push -f git@github.com:fmfe/genesis-docs-en.git master:gh-pages
+git push -f git@github.com:anish2690/genesis-docs-en.git master:gh-pages
 
 cd -

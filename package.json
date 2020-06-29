@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fmfe/genesis-docs.git"
+    "url": "git+https://github.com/anish2690/genesis-docs-en.git"
   },
-  "author": "Followme",
+  "author": "Anish",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fmfe/genesis-docs/issues"
+    "url": "https://github.com/anish2690/genesis-docs-en/issues"
   },
-  "homepage": "https://github.com/fmfe/genesis-docs#readme",
+  "homepage": "https://github.com/anish2690/genesis-docs-en#readme",
   "devDependencies": {
     "vuepress": "^1.4.0"
   }
