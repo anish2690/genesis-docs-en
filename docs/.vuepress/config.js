@@ -19,6 +19,13 @@ module.exports = {
         ],
       },
       { text: "Official blog", link: "/blog/followme5.0" },
+      {
+        text: "Languages",
+        items: [
+          { text: "English", link: "https://anish2690.github.io/genesis-docs-en/", target: '_self', rel: '' },
+          { text: "简体中文", link: "https://fmfe.github.io/genesis-docs/guide/", target: '_self', rel: '' },
+        ],
+      },
     ],
     sidebar: [
       "/",
