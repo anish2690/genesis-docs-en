@@ -112,3 +112,26 @@ export default {
 </script>
 
 ```
+
+## Event communication
+You can listen to events emitted by the root component of the remote component like a normal component
+```vue
+<template>
+    <remote-view :fetch="fetch" @my-event="myEvent" />
+</template>
+<script>
+export default {
+    methods: {
+        myEvent(str) {
+            console.log(str); // Hello world
+        }
+    }
+}
+</script>
+```
+
+Remote component fires event
+
+```ts
+this.$root.$emit('my-event', 'Hello world');
+```
