@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Babel | Vue Genesis</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="Vue SSR-based micro frontend, micro service, and lightweight solution">
+    <link rel="preload" href="/genesis-docs-en/assets/css/0.styles.098aae58.css" as="style"><link rel="preload" href="/genesis-docs-en/assets/js/app.15092de0.js" as="script"><link rel="preload" href="/genesis-docs-en/assets/js/2.0c2f5ba2.js" as="script"><link rel="preload" href="/genesis-docs-en/assets/js/17.ad3f8768.js" as="script"><link rel="prefetch" href="/genesis-docs-en/assets/js/10.ba3a2383.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/11.8221a8eb.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/12.cf53d6d1.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/13.346bf1a1.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/14.2d4302c4.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/15.7e0fc8c6.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/16.1d86fe56.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/18.5412e4db.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/19.017d20c6.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/20.d06ea6bb.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/21.3aa60e18.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/22.35944f72.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/3.73a8364c.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/4.d2ccaca3.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/5.685a3d9d.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/6.2b6abcc3.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/7.b87aace3.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/8.3e4be250.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/9.c3610892.js">
+    <link rel="stylesheet" href="/genesis-docs-en/assets/css/0.styles.098aae58.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/genesis-docs-en/" class="home-link router-link-active"><!----> <span class="site-name">Vue Genesis</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/genesis-docs-en/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/genesis-docs-en/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Core library" class="dropdown-title"><span class="title">Core library</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/genesis-docs-en/core/" class="nav-link">
+  genesis-core
+</a></li><li class="dropdown-item"><!----> <a href="/genesis-docs-en/compiler/" class="nav-link">
+  genesis-compiler
+</a></li><li class="dropdown-item"><!----> <a href="/genesis-docs-en/app/" class="nav-link">
+  genesis-app
+</a></li><li class="dropdown-item"><!----> <a href="/genesis-docs-en/remote/" class="nav-link">
+  genesis-remote
+</a></li></ul></div></div><div class="nav-item"><a href="/genesis-docs-en/blog/followme5.0.html" class="nav-link">
+  Official blog
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://anish2690.github.io/genesis-docs-en/" target="_self" rel="" class="nav-link external">
+  English
+  <!----></a></li><li class="dropdown-item"><!----> <a href="https://fmfe.github.io/genesis-docs/guide/" target="_self" rel="" class="nav-link external">
+  简体中文
+  <!----></a></li></ul></div></div> <a href="https://github.com/fmfe/genesis" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/genesis-docs-en/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/genesis-docs-en/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Core library" class="dropdown-title"><span class="title">Core library</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/genesis-docs-en/core/" class="nav-link">
+  genesis-core
+</a></li><li class="dropdown-item"><!----> <a href="/genesis-docs-en/compiler/" class="nav-link">
+  genesis-compiler
+</a></li><li class="dropdown-item"><!----> <a href="/genesis-docs-en/app/" class="nav-link">
+  genesis-app
+</a></li><li class="dropdown-item"><!----> <a href="/genesis-docs-en/remote/" class="nav-link">
+  genesis-remote
+</a></li></ul></div></div><div class="nav-item"><a href="/genesis-docs-en/blog/followme5.0.html" class="nav-link">
+  Official blog
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://anish2690.github.io/genesis-docs-en/" target="_self" rel="" class="nav-link external">
+  English
+  <!----></a></li><li class="dropdown-item"><!----> <a href="https://fmfe.github.io/genesis-docs/guide/" target="_self" rel="" class="nav-link external">
+  简体中文
+  <!----></a></li></ul></div></div> <a href="https://github.com/fmfe/genesis" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/genesis-docs-en/" aria-current="page" class="sidebar-link">Home</a></li><li><section class="sidebar-group depth-0"><a href="/genesis-docs-en/guide/" class="sidebar-heading clickable router-link-active"><span>Guide</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/genesis-docs-en/guide/introduce.html" class="sidebar-link">Introduction</a></li><li><a href="/genesis-docs-en/guide/" aria-current="page" class="sidebar-link">Quick Start</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/genesis-docs-en/guide/" class="sidebar-heading clickable router-link-active open"><span>Advanced</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/genesis-docs-en/guide/renderer.html" class="sidebar-link">Renderer</a></li><li><a href="/genesis-docs-en/guide/micro.html" class="sidebar-link">Microarchitecture</a></li><li><a href="/genesis-docs-en/guide/meta.html" class="sidebar-link">Page meta information</a></li><li><a href="/genesis-docs-en/guide/webpack.html" class="sidebar-link">Webpack</a></li><li><a href="/genesis-docs-en/guide/babel.html" aria-current="page" class="active sidebar-link">Babel</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/genesis-docs-en/guide/babel.html#write-a-babel-plugin" class="sidebar-link">Write a Babel plugin</a></li></ul></li><li><a href="/genesis-docs-en/guide/postcss.html" class="sidebar-link">Postcss</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/genesis-docs-en/blog/" class="sidebar-heading clickable"><span>Official blog</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/genesis-docs-en/blog/followme5.0.html" class="sidebar-link">Vue SSR-based micro-architecture practice in FOLLOWME5.0</a></li><li><a href="/genesis-docs-en/blog/2020-05-25.html" class="sidebar-link">Based on Vue CSR micro frontend implementation plan</a></li><li><a href="/genesis-docs-en/blog/2020-06-18.html" class="sidebar-link">Further design and thinking of remote components</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="babel"><a href="#babel" class="header-anchor">#</a> Babel</h1> <p>The program does not provide the corresponding parameter configuration, you can only modify the configuration of <a href="https://www.babeljs.cn/" target="_blank" rel="noopener noreferrer">Babel<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> in the form of a plug-in.</p> <h2 id="write-a-babel-plugin"><a href="#write-a-babel-plugin" class="header-anchor">#</a> Write a Babel plugin</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> Plugin<span class="token punctuation">,</span> BabelConfig <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@fmfe/genesis-core'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">BabelPlugin</span> <span class="token keyword">extends</span> <span class="token class-name">Plugin</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token function">babel</span><span class="token punctuation">(</span><span class="token parameter">config<span class="token operator">:</span> BabelConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// config.presets</span>
+        <span class="token comment">// config.plugins</span>
+        <span class="token comment">// Modified example</span>
+        config<span class="token punctuation">.</span>presets<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">preset</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token builtin">Array</span><span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>preset<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> preset<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">'@babel/preset-env'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">// Modify babel preset-env configuration</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>genesis.dev.ts</code> and <code>genesis.build.ts</code> use this plugin</p> <div class="language-ts extra-class"><pre class="language-ts"><code>ssr<span class="token punctuation">.</span>plugin<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>BabelPlugin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/genesis-docs-en/guide/webpack.html" class="prev">
+        Webpack
+      </a></span> <span class="next"><a href="/genesis-docs-en/guide/postcss.html">
+        Postcss
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/genesis-docs-en/assets/js/app.15092de0.js" defer></script><script src="/genesis-docs-en/assets/js/2.0c2f5ba2.js" defer></script><script src="/genesis-docs-en/assets/js/17.ad3f8768.js" defer></script>
+  </body>
+</html>

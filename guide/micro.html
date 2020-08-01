@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Microarchitecture | Vue Genesis</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="Vue SSR-based micro frontend, micro service, and lightweight solution">
+    <link rel="preload" href="/genesis-docs-en/assets/css/0.styles.098aae58.css" as="style"><link rel="preload" href="/genesis-docs-en/assets/js/app.15092de0.js" as="script"><link rel="preload" href="/genesis-docs-en/assets/js/2.0c2f5ba2.js" as="script"><link rel="preload" href="/genesis-docs-en/assets/js/9.c3610892.js" as="script"><link rel="prefetch" href="/genesis-docs-en/assets/js/10.ba3a2383.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/11.8221a8eb.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/12.cf53d6d1.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/13.346bf1a1.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/14.2d4302c4.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/15.7e0fc8c6.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/16.1d86fe56.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/17.ad3f8768.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/18.5412e4db.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/19.017d20c6.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/20.d06ea6bb.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/21.3aa60e18.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/22.35944f72.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/3.73a8364c.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/4.d2ccaca3.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/5.685a3d9d.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/6.2b6abcc3.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/7.b87aace3.js"><link rel="prefetch" href="/genesis-docs-en/assets/js/8.3e4be250.js">
+    <link rel="stylesheet" href="/genesis-docs-en/assets/css/0.styles.098aae58.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/genesis-docs-en/" class="home-link router-link-active"><!----> <span class="site-name">Vue Genesis</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/genesis-docs-en/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/genesis-docs-en/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Core library" class="dropdown-title"><span class="title">Core library</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/genesis-docs-en/core/" class="nav-link">
+  genesis-core
+</a></li><li class="dropdown-item"><!----> <a href="/genesis-docs-en/compiler/" class="nav-link">
+  genesis-compiler
+</a></li><li class="dropdown-item"><!----> <a href="/genesis-docs-en/app/" class="nav-link">
+  genesis-app
+</a></li><li class="dropdown-item"><!----> <a href="/genesis-docs-en/remote/" class="nav-link">
+  genesis-remote
+</a></li></ul></div></div><div class="nav-item"><a href="/genesis-docs-en/blog/followme5.0.html" class="nav-link">
+  Official blog
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://anish2690.github.io/genesis-docs-en/" target="_self" rel="" class="nav-link external">
+  English
+  <!----></a></li><li class="dropdown-item"><!----> <a href="https://fmfe.github.io/genesis-docs/guide/" target="_self" rel="" class="nav-link external">
+  简体中文
+  <!----></a></li></ul></div></div> <a href="https://github.com/fmfe/genesis" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/genesis-docs-en/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/genesis-docs-en/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Core library" class="dropdown-title"><span class="title">Core library</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/genesis-docs-en/core/" class="nav-link">
+  genesis-core
+</a></li><li class="dropdown-item"><!----> <a href="/genesis-docs-en/compiler/" class="nav-link">
+  genesis-compiler
+</a></li><li class="dropdown-item"><!----> <a href="/genesis-docs-en/app/" class="nav-link">
+  genesis-app
+</a></li><li class="dropdown-item"><!----> <a href="/genesis-docs-en/remote/" class="nav-link">
+  genesis-remote
+</a></li></ul></div></div><div class="nav-item"><a href="/genesis-docs-en/blog/followme5.0.html" class="nav-link">
+  Official blog
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Languages" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://anish2690.github.io/genesis-docs-en/" target="_self" rel="" class="nav-link external">
+  English
+  <!----></a></li><li class="dropdown-item"><!----> <a href="https://fmfe.github.io/genesis-docs/guide/" target="_self" rel="" class="nav-link external">
+  简体中文
+  <!----></a></li></ul></div></div> <a href="https://github.com/fmfe/genesis" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/genesis-docs-en/" aria-current="page" class="sidebar-link">Home</a></li><li><section class="sidebar-group depth-0"><a href="/genesis-docs-en/guide/" class="sidebar-heading clickable router-link-active"><span>Guide</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/genesis-docs-en/guide/introduce.html" class="sidebar-link">Introduction</a></li><li><a href="/genesis-docs-en/guide/" aria-current="page" class="sidebar-link">Quick Start</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/genesis-docs-en/guide/" class="sidebar-heading clickable router-link-active open"><span>Advanced</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/genesis-docs-en/guide/renderer.html" class="sidebar-link">Renderer</a></li><li><a href="/genesis-docs-en/guide/micro.html" aria-current="page" class="active sidebar-link">Microarchitecture</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/genesis-docs-en/guide/micro.html#architecture-diagram" class="sidebar-link">Architecture diagram</a></li><li class="sidebar-sub-header"><a href="/genesis-docs-en/guide/micro.html#provide-service-rendering-interface" class="sidebar-link">Provide service rendering interface</a></li><li class="sidebar-sub-header"><a href="/genesis-docs-en/guide/micro.html#remote-component-call" class="sidebar-link">Remote component call</a></li><li class="sidebar-sub-header"><a href="/genesis-docs-en/guide/micro.html#page-multiple-routing-example" class="sidebar-link">Page multiple routing example</a></li><li class="sidebar-sub-header"><a href="/genesis-docs-en/guide/micro.html#externalization-dependency" class="sidebar-link">Externalization dependency</a></li><li class="sidebar-sub-header"><a href="/genesis-docs-en/guide/micro.html#complete-example" class="sidebar-link">Complete example</a></li></ul></li><li><a href="/genesis-docs-en/guide/meta.html" class="sidebar-link">Page meta information</a></li><li><a href="/genesis-docs-en/guide/webpack.html" class="sidebar-link">Webpack</a></li><li><a href="/genesis-docs-en/guide/babel.html" class="sidebar-link">Babel</a></li><li><a href="/genesis-docs-en/guide/postcss.html" class="sidebar-link">Postcss</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/genesis-docs-en/blog/" class="sidebar-heading clickable"><span>Official blog</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/genesis-docs-en/blog/followme5.0.html" class="sidebar-link">Vue SSR-based micro-architecture practice in FOLLOWME5.0</a></li><li><a href="/genesis-docs-en/blog/2020-05-25.html" class="sidebar-link">Based on Vue CSR micro frontend implementation plan</a></li><li><a href="/genesis-docs-en/blog/2020-06-18.html" class="sidebar-link">Further design and thinking of remote components</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="microarchitecture"><a href="#microarchitecture" class="header-anchor">#</a> Microarchitecture</h1> <p>As the application scale grows larger and larger, packaging all the functions of all business modules into one project will cause the packaging speed to become slower and slower, and if multiple teams maintain it, conflicts will easily occur. So we need to split it into different services and break down business modules. The following will use <a href="https://www.followme.com/?source=genesis" target="_blank" rel="noopener noreferrer">Followme5.0<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> layout to take you to realize a micro frontend, micro service architecture.</p> <h2 id="architecture-diagram"><a href="#architecture-diagram" class="header-anchor">#</a> Architecture diagram</h2> <p><img src="/genesis-docs-en/assets/img/microarchitecture.49ae253b.jpg" alt="Service Flow Chart"></p> <ul><li>From the frontend layout, it is divided into left navigation and right content area, which is a typical left and right layout.</li> <li>From the perspective of service architecture, it is divided into aggregation services and sub-services. All requests will go to aggregation services and request corresponding sub-services according to different url addresses</li></ul> <h2 id="provide-service-rendering-interface"><a href="#provide-service-rendering-interface" class="header-anchor">#</a> Provide service rendering interface</h2> <div class="language-ts extra-class"><pre class="language-ts"><code>    <span class="token keyword">const</span> renderModes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'ssr-html'</span><span class="token punctuation">,</span> <span class="token string">'ssr-json'</span><span class="token punctuation">,</span> <span class="token string">'csr-html'</span><span class="token punctuation">,</span> <span class="token string">'csr-json'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">/**
+     * Provide an API to allow external rendering
+     */</span>
+    app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token string">'/api/render'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">// Get the rendered address</span>
+
+        <span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token function">decodeURIComponent</span><span class="token punctuation">(</span><span class="token function">String</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>query<span class="token punctuation">.</span>renderUrl<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Get the route rendering mode</span>
+        <span class="token keyword">const</span> routerMode <span class="token operator">=</span>
+            <span class="token punctuation">[</span><span class="token string">'abstract'</span><span class="token punctuation">,</span> <span class="token string">'history'</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token function">String</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>query<span class="token punctuation">.</span>routerMode<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span>
+                <span class="token operator">?</span> req<span class="token punctuation">.</span>query<span class="token punctuation">.</span>routerMode
+                <span class="token operator">:</span> <span class="token string">'history'</span><span class="token punctuation">;</span>
+        <span class="token comment">// Rendered mode</span>
+        <span class="token keyword">const</span> mode<span class="token operator">:</span> <span class="token builtin">any</span> <span class="token operator">=</span>
+            renderModes<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token function">String</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>query<span class="token punctuation">.</span>renderMode<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span>
+                <span class="token operator">?</span> <span class="token function">String</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>query<span class="token punctuation">.</span>renderMode<span class="token punctuation">)</span>
+                <span class="token operator">:</span> <span class="token string">'ssr-json'</span><span class="token punctuation">;</span>
+
+        renderer
+            <span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                url<span class="token punctuation">,</span>
+                mode<span class="token punctuation">,</span>
+                state<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    routerMode
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">r</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                res<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>next<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>The above received a total of three parameters, rendering address, rendering mode and routing mode, it will provide a common rendering outlet to facilitate other service calls.</p> <h2 id="remote-component-call"><a href="#remote-component-call" class="header-anchor">#</a> Remote component call</h2> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>remote-view</span>
+            <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>name in names<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ssrname === name<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>name<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name">:clientFetch</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>() =&gt; clientFetch(name)<span class="token punctuation">&quot;</span></span>
+            <span class="token attr-name">:serverFetch</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>() =&gt; serverFetch(name)<span class="token punctuation">&quot;</span></span>
+        <span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>remote-view</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> RemoteView <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@fmfe/genesis-remote'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">Data</span> <span class="token punctuation">{</span>
+    names<span class="token operator">:</span> string<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Methods</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">clientFetch</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">ssrname<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Promise<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+    <span class="token function-variable function">serverFetch</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">ssrname<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Promise<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Computed</span> <span class="token punctuation">{</span>
+    ssrname<span class="token operator">:</span> string<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Vue<span class="token punctuation">.</span>extend<span class="token operator">&lt;</span>Data<span class="token punctuation">,</span> Methods<span class="token punctuation">,</span> Computed<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'container'</span><span class="token punctuation">,</span>
+    components<span class="token operator">:</span> <span class="token punctuation">{</span>
+        RemoteView
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            names<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">ssrname</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>meta<span class="token punctuation">.</span>ssrname<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">ssrname</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>names<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>ssrname<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>names<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>ssrname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>names<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>ssrname<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">/**
+         * When the client calls remotely, CSR rendering
+         */</span>
+        <span class="token keyword">async</span> <span class="token function">clientFetch</span><span class="token punctuation">(</span><span class="token parameter">ssrname<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> renderUrl <span class="token operator">=</span> <span class="token function">encodeURIComponent</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>fullPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>
+                <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://localhost:3000/api/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>ssrname<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/render</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    params<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        routerMode<span class="token operator">:</span> <span class="token string">'history'</span><span class="token punctuation">,</span>
+                        renderMode<span class="token operator">:</span> <span class="token string">'csr-json'</span><span class="token punctuation">,</span>
+                        renderUrl
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> res<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">/**
+         * When the server is called remotely, SSR rendering
+         */</span>
+        <span class="token keyword">async</span> <span class="token function">serverFetch</span><span class="token punctuation">(</span><span class="token parameter">ssrname<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> renderUrl <span class="token operator">=</span> <span class="token function">encodeURIComponent</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>fullPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>
+                <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">http://localhost:3000/api/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>ssrname<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/render</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    params<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        routerMode<span class="token operator">:</span> <span class="token string">'history'</span><span class="token punctuation">,</span>
+                        renderMode<span class="token operator">:</span> <span class="token string">'ssr-json'</span><span class="token punctuation">,</span>
+                        renderUrl
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> res<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><ul><li>When the user accesses the first screen, we prefetch data remotely on the server side, and take SSR rendering, which is also conducive to SEO</li> <li>CSR rendering is used when the client calls remotely, which can reduce the pressure on the server</li> <li>In order to prevent users from accessing the same service, they need to re-request each time, so an array is defined, all the accessed services are stored in an array, and only the services accessed by the current user are displayed, and other services are hidden</li></ul> <p>For more in-depth understanding of remote components, please click <a href="../remote">here</a></p> <h2 id="page-multiple-routing-example"><a href="#page-multiple-routing-example" class="header-anchor">#</a> Page multiple routing example</h2> <p>The micro front-end architecture is used, which means that each service has its own routing. In order to ensure routing synchronization, we provide a library that wraps vue-router. You need to create a route from this library. Click <a href="../app">here</a> Learn more</p> <h2 id="externalization-dependency"><a href="#externalization-dependency" class="header-anchor">#</a> Externalization dependency</h2> <p>With more and more services, you may not want to package the vue library once for each service. You may want to externalize some dependencies, <a href="/genesis-docs-en/core/#hookdescription">click here to learn</a></p> <h2 id="complete-example"><a href="#complete-example" class="header-anchor">#</a> Complete example</h2> <p>Because of the limited space for writing documents, we have written a complete micro frontend &amp; micro service demo. You can use this demo for a more in-depth understanding.</p> <ul><li><a href="https://github.com/fmfe/vue-genesis-micro" target="_blank" rel="noopener noreferrer">vue-genesis-micro<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/genesis-docs-en/guide/renderer.html" class="prev">
+        Renderer
+      </a></span> <span class="next"><a href="/genesis-docs-en/guide/meta.html">
+        Page meta information
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/genesis-docs-en/assets/js/app.15092de0.js" defer></script><script src="/genesis-docs-en/assets/js/2.0c2f5ba2.js" defer></script><script src="/genesis-docs-en/assets/js/9.c3610892.js" defer></script>
+  </body>
+</html>
