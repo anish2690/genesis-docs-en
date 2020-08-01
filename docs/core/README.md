@@ -184,6 +184,13 @@ Type: `string`
 ### ssr.publicPath
 Note: The basic path of applying static resources will affect the related configuration of webpack. [options.name](#name) can modify this value
 Type: `string`
+```ts
+const ssr = new SSR({
+    build: {
+         publicPath: 'https://storage.googleapis.com/bucket-name/'
+    }
+});
+```
 ### ssr.baseDir
 Note: the basic directory of the application, [options.baseDir](#build-basedir) can modify this value    
 Default value: `path.resolve()`
