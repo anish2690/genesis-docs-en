@@ -10,6 +10,7 @@ export class PostcssPlugin extends Plugin {
         config.plugins.push({
             // Plugin
         });
+        // example: config.plugins.push(require('tailwindcss'))
     }
 }
 ```
