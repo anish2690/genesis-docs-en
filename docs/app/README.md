@@ -18,7 +18,7 @@ const router = new Router({
     mode: 'history'
 });
 ```
-Just need to modify [VueRouter](https://github.com/vuejs/vue-router) into a router of `@fmfe/genesis-app`, and the other is still the same as [VueRouter](https://github.com com/vuejs/vue-router) is used in the same way
+Just need to modify [VueRouter](https://github.com/vuejs/vue-router) into a router of `@fmfe/genesis-app`, and the other is still the same as [VueRouter](https://github.com/vuejs/vue-router) is used in the same way
 
 
 ### Client use
@@ -34,7 +34,7 @@ export default async (clientOptions: ClientOptions): Promise<Vue> => {
         App,
         clientOptions,
         vueOptions: {
-            // Options passed to new Vue({})
+            // Options passed to new Vue({}) example router, store etc
             // By default, renderContext is passed to new Vue({ clientOptions })
         }
     });
@@ -54,7 +54,7 @@ export default async (renderContext: RenderContext): Promise<Vue> => {
         App,
         renderContext,
         vueOptions: {
-            // options passed to new Vue({})
+            // options passed to new Vue({})  example router, store etc
             // Recognize that renderContext is passed to new Vue({ renderContext })
         }
     });

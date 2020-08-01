@@ -25,7 +25,7 @@ Signature:
 ```ts
 build.destroy(): Promise<void>;
 ```
-## Build 例子
+## Build Example
 ```ts
 import { Build } from '@fmfe/genesis-compiler';
 import { SSR } from '@fmfe/genesis-core'
