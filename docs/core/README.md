@@ -80,7 +80,7 @@ const ssr = new SSR({
 ```ts
 const ssr = new SSR({
     build: {
-        transpile: [/src/]
+        transpile: [/src/]  // transpile: [/view-design/],
     }
 });
 ```
